@@ -1,3 +1,4 @@
+# By: Magnus Crooke, File Name: compare.py, Last modified: 11-17-17, This program is a game of compare.
 import card
 import deck
 newcard = card.Card(1, "Hearts")
@@ -5,7 +6,7 @@ newcard = card.Card(1, "Hearts")
 
 def main():
     """
-
+    This function plays the game of compare
     :return:
     """
     newdeck = deck.Deck()
@@ -20,10 +21,10 @@ def main():
 
 def playing_game(firstplayer_cards, secondplayer_cards):
     """
-
-    :param firstplayer_cards:
-    :param secondplayer_cards:
-    :return:
+    This function asks the user if they would like to play the game
+    :param firstplayer_cards: This function keeps track of all of the points for the first player.
+    :param secondplayer_cards: This function keeps track of all of the points for the second player.
+    :return: This function returns who won the game, with how many points they had.
     """
     P1_score = 0
     P2_score = 0
@@ -50,14 +51,15 @@ def playing_game(firstplayer_cards, secondplayer_cards):
             print("First player score: ", P1_score)
             print("Second player score: ", P2_score)
     else:
-        print("It was a tie")
+        print("Sorry, have a nice day!")
+
 
 def comparing_cards(firstcard, secondcard):
     """
-
-    :param firstcard:
-    :param secondcard:
-    :return:
+    This function compares all of the cards dealt out and gives points to the player who won the games.
+    :param firstcard: This function gives points to the first player if they win.
+    :param secondcard: This function gives points to the second player if they win.
+    :return: This function saves the points for each player.
     """
     if firstcard.rank > secondcard.rank:
         return 1
